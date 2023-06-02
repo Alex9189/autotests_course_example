@@ -19,20 +19,14 @@ import unittest  # Не удалять
 # Здесь пишем код
 def treatment_sum(our_tuple):
     try:
-        if len(our_tuple) < 2:
-            raise Exception('Недостаточно данных')
-        elif len(our_tuple) > 2:
-            raise Exception('Много данных')
-        elif isinstance(our_tuple[0], (int, float)) and isinstance(our_tuple[1], (int, float)):
-            return our_tuple[0] + our_tuple[1]
-        elif isinstance(our_tuple[0], (str)) and isinstance(our_tuple[1], (str)):
-            return our_tuple[0] + our_tuple[1]
-        else:
-            raise ValueError
-    except ValueError:
+        i = (our_tuple[0]) + (our_tuple[1])
+    except TypeError:
         return 'Нельзя сложить эти данные'
-    except Exception as e:
-        return str(e)
+    except IndexError:
+        return 'Недостаточно данных'
+    if len(our_tuple) != 2:
+        raise Exception ('Много данных')
+    return i
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 class MyTestCase(unittest.TestCase):
