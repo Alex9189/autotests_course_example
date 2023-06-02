@@ -10,22 +10,14 @@
 # Здесь пишем код
 def segment(coord1, coord2):
     try:
-        if not all(isinstance(coord, (int, float)) for coord in coord1 + coord2):
-            raise TypeError
-        else:
-            return sum(coord1) + sum(coord2)
+        # if not all(isinstance(coord, (int, float)) for coord in coord1 + coord2):
+        #     raise TypeError
+        # else:
+            i = coord1[0] + coord1[1] + coord2[0] + coord2[1]
+            # i = sum(coord1) + sum(coord2)
     except Exception as e:
         return str(e)[::-1]
-# def segment(point1, point2):
-#     try:
-#         x1, y1 = point1
-#         x2, y2 = point2
-#         if isinstance(x1, (int, float)) and isinstance(y1, (int, float)) and isinstance(x2, (int, float)) and isinstance(y2, (int, float)):
-#             return x1 + y1 + x2 + y2
-#         # else:
-#         #     raise TypeError('Координаты должны быть числами')
-#     except Exception as e:
-#         return str(e)[::-1]
+    return i
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
