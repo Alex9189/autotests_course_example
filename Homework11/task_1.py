@@ -37,7 +37,7 @@ try:
     banner_item.click()
     driver.switch_to.window(driver.window_handles[1])
 
-    Power_title = driver.find_element(By.XPATH, ' //p[text()="Сила в людях"]')
+    power_title = driver.find_element(By.XPATH, ' //p[text()="Сила в людях"]')
     assert Power_title.text == 'Сила в людях'
 
     about = driver.find_element(By.CSS_SELECTOR, '.tensor_ru-Index__card-text [href="/about"]')
