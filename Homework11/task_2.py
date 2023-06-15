@@ -39,7 +39,7 @@ try:
     # contacts_btn.click()
     # action_chains.double_click(contacts_btn)
     # action_chains.perform()
-    sleep(4)
+    sleep(6)
 
     plus_btn = driver.find_element(By.CSS_SELECTOR, '.icon-RoundPlus')
     plus_btn.click()
@@ -75,6 +75,9 @@ try:
     delete = driver.find_elements(By.CSS_SELECTOR, '.controls-BaseButton .icon-Erase')
     delete[0].click()
     sleep(5)
+    letter = driver.find_elements(By.CSS_SELECTOR, '.msg-entity-content')
+    letter_fi1 = letter[0].text
+    assert letter_fi1[3:] != pismo
     # letter[0].click()
     # print('Авторизоваться')
     # sleep(1)

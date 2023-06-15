@@ -45,6 +45,5 @@ try:
     about.location_once_scrolled_into_view
     about.click()
     assert driver.current_url == 'https://tensor.ru/about', 'Неверный адрес сайта'
-    sleep(5)
 finally:
     driver.quit()
